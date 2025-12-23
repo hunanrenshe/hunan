@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>湖南人社</title>
+    <style>
+        /* 极简样式 - 和目标网站完全一致 */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            text-align: center; /* 让内容居中 */
+        }
+        
+        .container {
+            display: inline-block;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        /* 只显示图片，没有任何其他装饰 */
+        .content-img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            /* 仅为多张图片之间添加一点分隔 */
+            margin-bottom: 10px;
+        }
+        /* 可选：去除最后一张图片的底部间距，使视觉更紧凑 */
+        .content-img:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 只有一个容器，里面可以放多张图片 -->
+    <div class="container">
+        <!-- 第一张图片 -->
+        <img src="images/grc bzmxz-1.png" alt="湖南人社" class="content-img">
+        <!-- 第二张图片 -->
+        <img src="images/grc bzmxz-1.png" alt="其他图片说明" class="content-img">
+        <!-- 第三张图片 -->
+        <img src="images/grc bzmxz-1.png" alt="其他图片说明" class="content-img">
+        <!-- 需要添加更多图片，请直接复制上一行并修改 src 和 alt -->
+        <!-- 例如： -->
+        <!-- <img src="images/图片4.jpg" alt="图片说明" class="content-img"> -->
+    </div>
+</body>
+</html>
