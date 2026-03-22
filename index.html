@@ -2,49 +2,45 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 允许手机缩放，适配不同屏幕 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>湖南人社</title>
     <style>
-        /* 极简样式 - 和目标网站完全一致 */
-        body {
+        * {
             margin: 0;
             padding: 0;
-            background-color: white;
-            text-align: center; /* 让内容居中 */
+            box-sizing: border-box;
         }
-        
-        .container {
-            display: inline-block;
-            margin: 0 auto;
-            text-align: left;
+        html, body {
+            width: 100%;
+            min-height: 100vh; /* 允许页面滚动，适配多图片 */
+            background-color: #fff;
+            padding: 10px 0; /* 手机上下留边，避免贴屏 */
         }
-        
-        /* 只显示图片，没有任何其他装饰 */
+        /* 图片容器：适配手机+电脑，居中展示 */
+        .img-container {
+            width: 95%; /* 左右留边，提升体验 */
+            margin: 0 auto; /* 居中 */
+        }
+        /* 图片样式：自适应宽度，保留间距 */
         .content-img {
             display: block;
-            max-width: 100%;
-            height: auto;
-            /* 仅为多张图片之间添加一点分隔 */
-            margin-bottom: 10px;
+            width: 100%; /* 自适应容器宽度 */
+            height: auto; /* 保持图片比例，不变形 */
+            margin-bottom: 15px; /* 图片之间留间距 */
         }
-        /* 可选：去除最后一张图片的底部间距，使视觉更紧凑 */
+        /* 最后一张图片去掉底部间距 */
         .content-img:last-child {
             margin-bottom: 0;
         }
     </style>
 </head>
 <body>
-    <!-- 只有一个容器，里面可以放多张图片 -->
-    <div class="container">
-        <!-- 第一张图片 -->
-        <img src="images/湖南人社1.png" alt="湖南人社" class="content-img">
-        <!-- 第二张图片 -->
-        <img src="images/湖南人社2.png" alt="其他图片说明" class="content-img">
-        <!-- 第三张图片 -->
-        <img src="images/湖南人社2.png" alt="其他图片说明" class="content-img">
-        <!-- 需要添加更多图片，请直接复制上一行并修改 src 和 alt -->
-        <!-- 例如： -->
-        <!-- <img src="images/图片4.jpg" alt="图片说明" class="content-img"> -->
+    <div class="img-container">
+        <!-- 3张湖南人社PNG图片，按顺序展示 -->
+        <img src="湖南人社1.png" alt="湖南人社1" class="content-img">
+        <img src="湖南人社2.png" alt="湖南人社2" class="content-img">
+        <img src="湖南人社3.png" alt="湖南人社3" class="content-img">
     </div>
 </body>
 </html>
