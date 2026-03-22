@@ -2,7 +2,8 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 允许手机缩放，适配不同屏幕 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>湖南人社</title>
     <style>
         * {
@@ -12,22 +13,21 @@
         }
         html, body {
             width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background-color: white; /* 保持白底极简风格 */
+            min-height: 100vh; /* 允许页面滚动 */
+            background-color: #fff;
+            padding: 10px 0; /* 手机上下留边 */
         }
         .pdf-view {
-            width: 100vw;
-            height: 100vh;
+            width: 95%; /* 左右留边，避免贴屏 */
+            min-height: 90vh;
             border: none;
             display: block;
+            margin: 0 auto; /* 居中展示 */
         }
     </style>
 </head>
 <body>
-    <!-- 单个PDF全屏展示，路径根据你的实际情况调整 -->
-    <!-- 若PDF和HTML同目录（如GitHub仓库根目录），直接写文件名：src="湖南人社.pdf" -->
-    <!-- 若用腾讯云公有读链接，保留下面的链接即可 -->
-    <iframe class="pdf-view" src="湖南人社.pdf"></iframe>
+    <!-- 👇 核心修正：改为GitHub仓库内的PDF文件名（替换成你实际的文件名） -->
+    <iframe class="pdf-view" src="湖南人社.pdf" scrolling="auto"></iframe>
 </body>
 </html>
